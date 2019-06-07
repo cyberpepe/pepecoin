@@ -1407,6 +1407,9 @@ bool OpenNetworkConnection(const CAddress& addrConnect, CSemaphoreGrant *grantOu
             bAlreadySyncing = true;
             break;
         }
+
+        if(bAlreadySyncing)
+            break;
     }
     if(bAlreadySyncing)
         return false;
